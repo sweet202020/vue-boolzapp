@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Boolzapp</title>
 </head>
-<body class="debug">
+<body class="">
 
     <div id="app">
         <div class="container">
@@ -124,15 +124,40 @@
                 <!-- /.col-4 -->
                 <div class="col-8">
                     <header id="site_header">
-                        
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <img class="ms-3" src="./assets/img/avatar_1.jpg" alt="">
+                                        <div class="ms-2 mt-2">
+                                            <span>Michele</span>
+                                            <div class="last_message">Ultimo accesso ore 12.00</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-magnifying-glass mt-3 me-4"></i>
+                                        <i class="fa-sharp fa-solid fa-paperclip mt-3 me-4"></i>
+                                        <i class="fa-solid fa-ellipsis-vertical  mt-3 me-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </header>
                     <!-- /#site_header -->
                     <main id="site_main">
 
                     </main>
                     <!-- /#site_main -->
-                    <footer id="site_footer">
-                        
+                    <footer id="site_footer" class="d-flex justify-content-center">
+                        <div class="emoji_icon">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" placeholder="Scrivi un messaggio...">
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
                     </footer>
                     <!-- /#site_footer -->
                 </div>

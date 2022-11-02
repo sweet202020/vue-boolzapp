@@ -16,11 +16,6 @@ img{
 }
 
 /* #region debug */
-.debug .col-4, .debug .col-8{
-    
-    height: calc(100vh - 100px); 
-    margin-top: 50px;
-}
 .debug .col-8{
     background-color: blue;
     display: flex;
@@ -43,24 +38,30 @@ img{
     width: 100%;   
 }
 /* #endregion debug */
+.col-4, .col-8{
+   
+   height: calc(100vh - 200px); 
+   margin: 50px 0;
+}
 
 .container, .row{
     --bs-gutter-x: 0; 
 }
 
+/* #region col-4 */
 
 .row-cols-12{
     flex-direction: column;
     
 }
 
-.row-cols-12 img, .contacts img{
+.row-cols-12 img, .contacts img, .col-8 .col-12 img{
     width: 50px;
     border-radius: 50%;
     margin-top: 8px;
 
 }
-.row-cols-12 .me{
+.row-cols-12 .me, header{
     background-color: var(--whats-active);
 }
 .row-cols-12 .me .icons{
@@ -109,7 +110,7 @@ img{
 }
 
 .contacts{
-    height: calc(100% - 200px);
+    height: calc(100% - 100px);
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -128,3 +129,37 @@ img{
 .active{
     background-color: var(--whats-active);
 }
+/* #endregion col-4 */
+
+/* #region col-8 */
+
+header i{
+    color: var(--whats-icons);
+}
+
+main{
+    background-image: url("../img/mine.jpg");
+    height: calc(100vh - 243px);
+}
+
+footer{
+    background-color: var(--whats-active);
+    height: 50px;
+}
+footer .emoji_icon{
+    margin-right: 4rem;
+}
+footer input{
+    width: calc(100% - 30px);
+    height: 80%;
+    margin-top: 0.3rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+footer i{
+    font-size: 25px;
+    color: var(--whats-icons);
+    margin-top: 0.75rem;
+    
+}
+/* #endregion col-8 */
