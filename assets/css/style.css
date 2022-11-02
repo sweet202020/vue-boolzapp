@@ -11,9 +11,13 @@
     --whats-active: #EAEAEA;
 
 }
+img{
+    max-width: 100%;
+}
 
+/* #region debug */
 .debug .col-4, .debug .col-8{
-    background-color: red;
+    
     height: calc(100vh - 100px); 
     margin-top: 50px;
 }
@@ -24,7 +28,7 @@
     justify-content: space-between;
 }
 .debug .row-cols-12 .col{
-    background-color: #009688;
+    
     border: 1px solid;
 }
 .debug .col-8 header{
@@ -36,14 +40,65 @@
 .debug .col-8 footer{
     background-color: violet;
     height: 60px;
-    width: 100%;
-
-    
-    
+    width: 100%;   
 }
+/* #endregion debug */
 
 
 .row-cols-12{
     flex-direction: column;
     height: calc(100% - 20px);
+}
+
+.row-cols-12 img{
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 8px;
+
+}
+.row-cols-12 .me{
+    background-color: var(--whats-active);
+}
+.row-cols-12 .me .icons{
+    color: var(--whats-icons);
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.notice{
+    background-color: var(--whats--notifica);
+}
+.notice i{
+    font-size: 20px;
+    aspect-ratio: 1/1;
+    color: var(--whats--notifica);
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 0.5rem;
+}
+
+.notice a{
+    color: lightslategrey;
+}
+.notice p{
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.form{
+    background-color: rgb(243, 243, 243);
+    padding: 0.5rem 0.2rem;
+}
+.form i{
+    color: var(--whats-icons);
+    font-size: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    margin-right: 0.1rem;
+}
+.form input{
+    width: 400px;
+    border: none;
 }
