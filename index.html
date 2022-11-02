@@ -15,7 +15,11 @@
 <body class="">
 
     <div id="app">
-        <div class="container">
+        <div class="d-flex background">
+            <div class="col-3"></div>
+            <div class="col-9"></div>
+        </div>
+        <div class="container web_app">
             <div class="row">
                 <div class="col-4">
                     <div class="row row-cols-12">
@@ -52,76 +56,18 @@
                         <!-- /.form -->
                     </div>
                     <div class="contacts">
-                        <div class="my_card d-flex active">
-                            <img src="./assets/img/avatar_1.jpg" alt="">
+                        <div class="my_card d-flex" v-for="(contact) in contacts" :class="contacts[activeIndex]===contact ? 'active' : ''">
+                            <img :src="contact.avatar" alt="">
                             <div class="ms-4 mt-2">
-                                <span>Michele</span>
+                                <span>{{contact.name}}</span>
                                 <div class="last_message">Ultimo messaggio inviato</div>
                             </div>
                             <div class="clock">12.00</div>
                         </div>
-                        <div class="my_card d-flex">
-                            <img src="./assets/img/avatar_2.jpg" alt="">
-                            <div class="ms-4 mt-2">
-                                <span>Fabio</span>
-                                <div class="last_message">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="clock">12.00</div>
-                        </div>
-                        <div class="my_card d-flex">
-                            <img src="./assets/img/avatar_3.jpg" alt="">
-                            <div class="ms-4 mt-2">
-                                <span>Samuele</span>
-                                <div class="last_message">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="clock">12.00</div>
-                        </div>
-                        <div class="my_card d-flex">
-                            <img src="./assets/img/avatar_4.jpg" alt="">
-                            <div class="ms-4 mt-2">
-                                <span>Alessandro B.</span>
-                                <div class="last_message">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="clock">12.00</div>
-                        </div>
-                        <div class="my_card d-flex">
-                            <img src="./assets/img/avatar_5.jpg" alt="">
-                            <div class="ms-4 mt-2">
-                                <span>Alessandro L.</span>
-                                <div class="last_message">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="clock">12.00</div>
-                        </div>
-                        <div class="my_card d-flex">
-                            <img src="./assets/img/avatar_6.jpg" alt="">
-                            <div class="ms-4 mt-2">
-                                <span>Claudia</span>
-                                <div class="last_message">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="clock">12.00</div>
-                        </div>
-                        <div class="my_card d-flex">
-                            <img src="./assets/img/avatar_7.jpg" alt="">
-                            <div class="ms-4 mt-2">
-                                <span>Federico</span>
-                                <div class="last_message">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="clock">12.00</div>
-                        </div>
-                        <div class="my_card d-flex">
-                            <img src="./assets/img/avatar_8.jpg" alt="">
-                            <div class="ms-4 mt-2">
-                                <span>Davide</span>
-                                <div class="last_message">Ultimo messaggio inviato</div>
-                            </div>
-                            <div class="clock">12.00</div>
-                        </div>
-                        
-                        
                     </div>
                     <!-- /.contacts -->
                 </div>
-                <!-- /.col-4 -->
+                <!-- /.col-4 -->                        
                 <div class="col-8">
                     <header id="site_header">
                         <div class="container">
@@ -130,7 +76,7 @@
                                     <div class="d-flex">
                                         <img class="ms-3" src="./assets/img/avatar_1.jpg" alt="">
                                         <div class="ms-2 mt-2">
-                                            <span>Michele</span>
+                                            <span>{{contacts[0].name}}</span>
                                             <div class="last_message">Ultimo accesso ore 12.00</div>
                                         </div>
                                     </div>
@@ -144,7 +90,10 @@
                         </div>
                     </header>
                     <!-- /#site_header -->
-                    <main id="site_main">
+                    <main id="site_main" class="d-flex">
+                        <div v-for="(message, index) in contacts[activeIndex].messages" :class="contacts[activeIndex].messages[index].status === 'sent' ? 'my_message' : 'received_message'">   
+                            <div>{{message.message}}</div>
+                        </div>
 
                     </main>
                     <!-- /#site_main -->

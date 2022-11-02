@@ -9,6 +9,7 @@
     --whats-icons: #B1B1B1;
     --whats-primary: #DBDBD2;
     --whats-active: #EAEAEA;
+    --whats-message: #D5F9BA;
 
 }
 img{
@@ -43,11 +44,28 @@ img{
    height: calc(100vh - 200px); 
    margin: 50px 0;
 }
-
+.background{
+    flex-direction: column;
+    position: relative;
+}
+.background .col-3{
+    background-color: var(--whats-header);
+    height: 200px;
+    width: 100%;
+}
+.background .col-9{
+    background-color: var(--whats-primary);
+    height: calc(100vh - 200px);
+    width: 100%;
+}
 .container, .row{
     --bs-gutter-x: 0; 
 }
-
+.web_app{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
 /* #region col-4 */
 
 .row-cols-12{
@@ -113,6 +131,7 @@ img{
     height: calc(100% - 100px);
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: white;
 }
 .my_card{
     padding: 0.3rem 0;
@@ -140,6 +159,31 @@ header i{
 main{
     background-image: url("../img/mine.jpg");
     height: calc(100vh - 243px);
+    flex-direction: column;
+}
+.my_message{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    border-radius: 0.5rem;
+    width: 20rem;
+    height: 3rem;
+    background-color: var(--whats-message);
+    align-self: flex-end;
+    margin-left: 1rem;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    
+}
+.received_message{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    border-radius: 0.5rem;
+    width: 20rem;
+    height: 3rem;
+    background-color: white;
+    align-self: flex-start;
+    margin-left: 5rem;
+    margin-top: 1rem;
 }
 
 footer{
