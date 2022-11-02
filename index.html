@@ -58,11 +58,11 @@
                     <div class="contacts">
                         <div class="my_card d-flex" v-for="(contact, index) in contacts" :class="contacts[activeIndex]===contact ? 'active' : ''" @click="setActiveIndex(index)">
                             <img :src="contact.avatar" alt="">
-                            <div class="ms-4 mt-2">
+                            <div class="ms-3">
+                                <div class="clock">12.00</div> 
                                 <span>{{contact.name}}</span>
-                                <div class="last_message">Ultimo messaggio inviato</div>
+                                <div class="last_message">{{contact.messages[contact.messages.length-1].message}}</div>
                             </div>
-                            <div class="clock">12.00</div>
                         </div>
                     </div>
                     <!-- /.contacts -->
