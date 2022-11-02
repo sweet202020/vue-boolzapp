@@ -63,8 +63,9 @@ img{
 }
 .web_app{
     position: absolute;
-    top: 5%;
-    left: 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 /* #region col-4 */
 
