@@ -166,7 +166,7 @@ main{
     padding-top: 0.5rem;
     border-radius: 0.5rem;
     width: 20rem;
-    height: 3rem;
+    padding: 0.8rem 0.3rem;
     background-color: var(--whats-message);
     align-self: flex-end;
     margin-left: 1rem;
@@ -179,7 +179,7 @@ main{
     padding-top: 0.5rem;
     border-radius: 0.5rem;
     width: 20rem;
-    height: 3rem;
+    padding: 0.8rem 0.3rem;
     background-color: white;
     align-self: flex-start;
     margin-left: 5rem;
