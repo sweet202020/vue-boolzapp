@@ -3,7 +3,47 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --whats-header: #009688;
+    --whats--notifica: #8EDAFC;
+    --whats-icons: #B1B1B1;
+    --whats-primary: #DBDBD2;
+    --whats-active: #EAEAEA;
 
-body{
-    background-color: black;
+}
+
+.debug .col-4, .debug .col-8{
+    background-color: red;
+    height: calc(100vh - 100px); 
+    margin-top: 50px;
+}
+.debug .col-8{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.debug .row-cols-12 .col{
+    background-color: #009688;
+    border: 1px solid;
+}
+.debug .col-8 header{
+    background-color: brown;
+    height: 60px;
+    width: 100%;
+    
+}
+.debug .col-8 footer{
+    background-color: violet;
+    height: 60px;
+    width: 100%;
+
+    
+    
+}
+
+
+.row-cols-12{
+    flex-direction: column;
+    height: calc(100% - 20px);
 }
