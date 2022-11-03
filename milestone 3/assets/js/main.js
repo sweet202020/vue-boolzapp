@@ -182,6 +182,7 @@ createApp({
             ],
             activeIndex: 0,
             text: '',
+            intervalId:null,
         }
     },
     methods:{
@@ -202,9 +203,18 @@ createApp({
             })
      
             this.text=''
-            
-           
-        }
+
+            this.intervalId=setTimeout(() => {
+                myText.push({
+                    date: '10/01/2020 15:51:00',
+                    message: 'ok',
+                    status: 'received'
+                })
+            }, 1000);
+        },
+        
+        
+        
     }
 }).mount('#app')
 
