@@ -190,7 +190,7 @@ createApp({
             text: '',
             intervalId:null,
             inputSearch:'',
-            nameFilter: ''
+            
         }
     },
     methods:{
@@ -221,20 +221,26 @@ createApp({
             }, 1000);
         },
         searchContacts(){
-            /* this.contacts.forEach(nameContacts => {
-                 console.log(nameContacts); 
-           }); */
-           
-            const nameFilter= this.contacts.filter((nameContacts)=>{
-            /* console.log(nameContacts.name);
-            console.log(this.inputSearch);
-            console.log(nameContacts.name.toLowerCase()) */
-            return nameContacts.name.toLowerCase().includes(this.inputSearch.toLowerCase())
-        })
+            this.contacts.forEach(nameContacts => {
+                /* console.log(nameContacts);
+                console.log(nameContacts.visible);
+                console.log(nameContacts.name); */
+
+                if (nameContacts.name.toLowerCase().includes(this.inputSearch.toLowerCase())) {
+                    nameContacts.visible=true
+                    console.log(nameContacts.visible);
+
+                }else{
+                    nameContacts.visible=false
+                    console.log(nameContacts.visible);
+                }
+            });
+            /* return nameContacts.name.toLowerCase().includes(this.inputSearch.toLowerCase())
+        
             console.log(nameFilter); 
             nameFilter.forEach(element => {
                 console.log(element);
-            });
+            }); */
         }
         
         

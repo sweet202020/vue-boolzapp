@@ -56,28 +56,19 @@
                         <!-- /.form -->
                     </div>
                     <div class="contacts">
-                        <div class="my_card d-flex"
+                        <div class="my_card">
+                            <div v-show="contact.visible" 
                             v-for="(contact, index) in contacts" 
                             :class="contacts[activeIndex]===contact ? 'active' : ''" 
-                            @click="setActiveIndex(index)"
-                            v-if='inputSearch===""'>
-                            <img :src='`./assets/img/avatar${contact.avatar}.jpg`' alt="">
-                            <div class="ms-3">
-                                <div class="clock">12.00</div> 
-                                <span>{{contact.name}}</span>
-                                <div class="last_message">{{contact.messages[contact.messages.length-1].message}}</div>
-                            </div>
-                        </div>
-                        <div v-else class="my_card d-flex"
-                            v-for="(contact, index) in contacts" 
-                            :class="contacts[activeIndex]===contact ? 'active' : ''" 
-                            @click="setActiveIndex(index)">
-                            <img :src='`./assets/img/avatar${contact.avatar}.jpg`' alt="">
-                            <div class="ms-3">
-                                <div class="clock">11.00</div>
-                                <div>{{nameFilter}}</div> 
-                                <span>{{contact.name}}</span>
-                                <div class="last_message">{{contact.messages[contact.messages.length-1].message}}</div>
+                            @click="setActiveIndex(index)" >
+                                <div class="d-flex">
+                                    <img :src='`./assets/img/avatar${contact.avatar}.jpg`' alt="">
+                                    <div class="ms-3">
+                                        <div class="clock">12.00</div> 
+                                        <span>{{contact.name}}</span>
+                                        <div class="last_message">{{contact.messages[contact.messages.length-1].message}}</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
