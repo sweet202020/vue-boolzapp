@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --whats-header: #009688;
+    --whats--notifica: #8EDAFC;
+    --whats-icons: #B1B1B1;
+    --whats-primary: #DBDBD2;
+    --whats-active: #EAEAEA;
+    --whats-message: #D5F9BA;
+
+}
+img{
+    max-width: 100%;
+}
+
+/* #region debug */
+.debug .col-8{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.debug .row-cols-12 .col{
+    
+    border: 1px solid;
+}
+.debug .col-8 header{
+    background-color: brown;
+    height: 60px;
+    width: 100%;
+    
+}
+.debug .col-8 footer{
+    background-color: violet;
+    height: 60px;
+    width: 100%;   
+}
+/* #endregion debug */
+.col-4, .col-8{
+   
+   height: calc(100vh - 100px); 
+   margin: 50px 0;
+}
+.background{
+    flex-direction: column;
+    position: relative;
+}
+.background .col-3{
+    background-color: var(--whats-header);
+    height: 200px;
+    width: 100%;
+}
+.background .col-9{
+    background-color: var(--whats-primary);
+    height: calc(100vh - 200px);
+    width: 100%;
+}
+.container, .row{
+    --bs-gutter-x: 0; 
+}
+.web_app{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* #region col-4 */
+
+.row-cols-12{
+    flex-direction: column;
+    
+}
+
+.row-cols-12 img, .contacts img, .col-8 .col-12 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 8px;
+
+}
+.row-cols-12 .me, header{
+    background-color: var(--whats-active);
+    padding: 0.5rem 0;
+}
+.row-cols-12 .me .icons{
+    color: var(--whats-icons);
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.notice{
+    background-color: var(--whats--notifica);
+    padding: 0.8rem 0.4rem;
+
+}
+.notice i{
+    font-size: 20px;
+    aspect-ratio: 1/1;
+    color: var(--whats--notifica);
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 0.5rem;
+}
+
+.notice a{
+    color: lightslategrey;
+}
+.notice p{
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.form{
+    background-color: rgb(243, 243, 243);
+    padding: 0.5rem 0.2rem;
+}
+.form i{
+    color: var(--whats-icons);
+    font-size: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    margin-right: 0.1rem;
+}
+.form input{
+    width: 400px;
+    border: none;
+}
+
+.contacts{
+    height: calc(100% - 220px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+}
+.my_card{
+    padding: 0.3rem 0;
+    margin-top: 0.2rem;
+    
+}
+.my_card> div{
+    border: 1px solid rgb(235, 235, 235);
+}
+.last_message{
+    color: grey;
+}
+.contactName{
+    flex-direction: column;
+}
+.clock{
+    font-size: 12px;
+    margin-left: 18rem;
+}
+.active{
+    background-color: var(--whats-active);
+}
+/* #endregion col-4 */
+
+/* #region col-8 */
+
+header i{
+    color: var(--whats-icons);
+}
+
+main{
+    background-image: url("../img/mine.jpg");
+    height: calc(100vh - 243px);
+    flex-direction: column;
+    overflow-y: auto;
+}
+.my_message{
+    border-radius: 0.5rem;
+    width: 20rem;
+    padding: 0.8rem 0.3rem;
+    background-color: var(--whats-message);
+    align-self: flex-end;
+    margin-left: 1rem;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    
+}
+.received_message{
+    border-radius: 0.5rem;
+    width: 20rem;
+    padding: 0.8rem 0.3rem;
+    background-color: white;
+    align-self: flex-start;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+footer{
+    background-color: var(--whats-active);
+    height: 50px;
+}
+footer .emoji_icon{
+    margin-right: 4rem;
+}
+footer input{
+    width: calc(100% - 30px);
+    height: 80%;
+    margin-top: 0.3rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+footer i{
+    font-size: 25px;
+    color: var(--whats-icons);
+    margin-top: 0.75rem;
+    
+}
+/* #endregion col-8 */
+
+
+.delete, .info{
+    background-color: white;
+    padding: 1rem 0.5rem;
+    border: gray;
+    text-align: center;
+}
+.clickInfo{
+    width: 30%;
+    margin-left: 35rem;
+}
