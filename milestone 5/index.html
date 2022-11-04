@@ -100,9 +100,9 @@
                     <main id="site_main" class="d-flex ">
                         <div v-for="(message, index) in contacts[activeIndex].messages"
                          :class="message.status === 'sent' ? 'my_message' : 'received_message'"
-                         @click="DropdownMenu(index)"
                          >   
                             <div :class="cancelMessage">{{message.message}}</div>
+                            <span><i @click="DropdownMenu(index)" class="fa fa-chevron-down" aria-hidden="true"></i></span>
                         </div>
                         <div :class="infoMessage" class="clickInfo">
                             <div class="delete" @click="deleteMessage">Elimina Messaggio</div>

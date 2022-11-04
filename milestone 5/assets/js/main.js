@@ -257,11 +257,16 @@ createApp({
             console.log(index);
             console.log(this.messageIndex);
             this.infoMessage='d-block'
-
         },
+
+
         deleteMessage(){
-            console.log('elimino'); 
-            this.cancelMessage='d-none'
+             console.log('elimino'); 
+             /* this.cancelMessage='d-none'  */
+             this.contacts[this.activeIndex].messages.splice(this.messageIndex,1)
+           /*  const deleteText= this.contacts[this.activeIndex].messages.indexOf(this.messageIndex)
+            console.log(deleteText);
+            messages.splice(deleteText, 1) */
         }
         
         
