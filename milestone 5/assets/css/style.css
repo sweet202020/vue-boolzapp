@@ -219,10 +219,30 @@ footer i{
 .delete, .info{
     background-color: white;
     padding: 1rem 0.5rem;
-    border: gray;
+    border:1px solid rgb(233, 230, 230);
     text-align: center;
 }
 .clickInfo{
-    width: 30%;
-    margin-left: 35rem;
+    width: 60%;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 1;
+    
+}
+
+.textMessage{
+    position: relative;
+}
+.iconMessage{
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    
+}
+
+.textMessage:hover > .iconMessage{
+    display: block;
 }

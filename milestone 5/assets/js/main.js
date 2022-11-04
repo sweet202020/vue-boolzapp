@@ -196,7 +196,7 @@ createApp({
             text: '',
             intervalId:null,
             inputSearch:'',
-            infoMessage: 'd-none',
+            clickOnIcon: false,
             cancelMessage: '',
             messageIndex:0,
             
@@ -256,7 +256,8 @@ createApp({
             this.messageIndex=index
             console.log(index);
             console.log(this.messageIndex);
-            this.infoMessage='d-block'
+            this.clickOnIcon=!this.clickOnIcon
+            
         },
 
 
@@ -264,6 +265,9 @@ createApp({
              console.log('elimino'); 
              /* this.cancelMessage='d-none'  */
              this.contacts[this.activeIndex].messages.splice(this.messageIndex,1)
+            /*  if (this.contacts[this.activeIndex].messages.length===0){
+                this.contacts[this.activeIndex].messages.push(this.message)
+             } */
            /*  const deleteText= this.contacts[this.activeIndex].messages.indexOf(this.messageIndex)
             console.log(deleteText);
             messages.splice(deleteText, 1) */
