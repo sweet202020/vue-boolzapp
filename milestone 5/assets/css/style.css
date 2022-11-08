@@ -222,6 +222,9 @@ footer i{
     border:1px solid rgb(233, 230, 230);
     text-align: center;
 }
+.delete:hover{
+    cursor: pointer;
+}
 .clickInfo{
     width: 60%;
     position: absolute;
@@ -245,4 +248,5 @@ footer i{
 
 .textMessage:hover > .iconMessage{
     display: block;
+    cursor: pointer;
 }
